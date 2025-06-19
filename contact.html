@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>EduStrem | Contact</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #f7f9fc;
+      color: #333;
+    }
+    header {
+      background-color: #004aad;
+      color: white;
+      padding: 1.2rem 0;
+      text-align: center;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+    nav a {
+      color: white;
+      margin: 0 18px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #ffd700;
+    }
+    main {
+      max-width: 700px;
+      margin: 3rem auto 5rem auto;
+      background: white;
+      padding: 2.5rem 3rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #004aad;
+      margin-bottom: 1rem;
+    }
+    p {
+      text-align: center;
+      font-size: 1.15rem;
+      color: #555;
+      margin-bottom: 2.5rem;
+    }
+    h3 {
+      color: #004aad;
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+      border-bottom: 2px solid #004aad;
+      padding-bottom: 6px;
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    ul.contact-list {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 2rem;
+    }
+    ul.contact-list li {
+      background: #e8f0fe;
+      padding: 1rem 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      margin-bottom: 1rem;
+      font-weight: 600;
+      color: #004aad;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 450px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 1.1rem;
+    }
+    form {
+      max-width: 450px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      padding: 0.8rem 1rem;
+      border: 1.5px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      resize: vertical;
+      transition: border-color 0.3s ease;
+    }
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #004aad;
+      box-shadow: 0 0 5px #004aad55;
+    }
+    button {
+      background-color: #004aad;
+      color: white;
+      font-size: 1.1rem;
+      padding: 0.9rem 0;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      font-weight: 700;
+    }
+    button:hover {
+      background-color: #003366;
+    }
+    footer {
+      background-color: #004aad;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+      font-size: 0.9rem;
+      letter-spacing: 0.05rem;
+    }
+    .login-icon {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      font-size: 28px;
+      background-color: #004aad;
+      color: white;
+      padding: 12px;
+      border-radius: 50%;
+      text-align: center;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+      transition: background-color 0.3s ease;
+      z-index: 1000;
+    }
+    .login-icon:hover {
+      background-color: #003366;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>EduStrem</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Contact Us</h2>
+    <p>If you have any questions, suggestions, or feedback, feel free to reach out to any of our team members below or use the contact form.</p>
+
+    <h3>Team Members & Contact Info</h3>
+    <ul class="contact-list">
+      <li><span>Priyanshu Dangi</span><a href="mailto:priyanshu.dangi@email.com">priyanshu.dangi@email.com</a></li>
+      <li><span>Sachin Sharma</span><a href="mailto:sachin.sharma@email.com">sachin.sharma@email.com</a></li>
+      <li><span>Manish Singh</span><a href="mailto:manish.singh@email.com">manish.singh@email.com</a></li>
+      <li><span>Naman Joshi</span><a href="mailto:naman.joshi@email.com">naman.joshi@email.com</a></li>
+    </ul>
+
+    <h3>Send Us a Message</h3>
+    <form action="#" method="post">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 EduStrem</p>
+  </footer>
+
+</body>
+
+</html>

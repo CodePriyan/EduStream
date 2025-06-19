@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>EduStrem | Courses</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f4f6f9;
+      color: #333;
+    }
+    header {
+      background-color: #004aad; color: white;
+      padding: 1.5rem 2rem; text-align: center;
+      position: sticky; top: 0; z-index: 999;
+    }
+    nav { margin-top: 1rem; }
+    nav a {
+      color: white; margin: 0 15px;
+      text-decoration: none; font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: #ffdd57; }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(to right, #004aad, #007bff);
+      color: white; padding: 4rem 2rem; text-align: center;
+    }
+    .hero h2 { font-size: 2.5rem; margin-bottom: 1rem; }
+    .hero p {
+      font-size: 1.1rem; max-width: 600px;
+      margin: 0 auto 2rem;
+    }
+
+    /* Category Summary Cards */
+    .category-summary {
+      display: flex; flex-wrap: wrap;
+      justify-content: center; gap: 2rem;
+      padding: 3rem 1.5rem;
+    }
+    .category-card {
+      background: white; border-radius: 15px;
+      padding: 2rem; box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+      max-width: 300px; text-align: center;
+      cursor: pointer; transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .category-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    .category-card h3 { font-size: 1.3rem; margin-bottom: 1rem; }
+    .category-card p { font-size: 0.95rem; color: #555; }
+
+    /* Video Sections */
+    .video-section {
+      display: none; padding: 2rem 1rem;
+      max-width: 1000px; margin: auto;
+    }
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+      gap: 2rem;
+    }
+    .video-card {
+      background: white; border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
+    .video-card iframe {
+      width: 100%; height: 180px; border:none;
+    }
+    .video-card h4 {
+      padding: 1rem; font-size: 1rem;
+      color: #004aad; text-align: center;
+    }
+
+    /* Floating Login Icon */
+    .login-icon {
+      position: fixed; bottom: 20px; right: 20px;
+      background: #004aad; color: white;
+      padding: 12px; border-radius: 50%;
+      font-size: 1.3rem; box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      cursor: pointer; transition: background 0.3s;
+      z-index: 1000;
+    }
+    .login-icon:hover { background: #003366; }
+
+    footer {
+      background-color: #004aad; color: white;
+      text-align: center; padding: 1rem; margin-top: 3rem;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero h2 { font-size: 2rem; }
+      .category-card { padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>EduStrem</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h2>Welcome to Categories 📂</h2>
+    <p>Select a category to explore its video lessons on cloud-hosted resources.</p>
+  </section>
+
+  <!-- Category Summary -->
+  <section class="category-summary">
+    <div class="category-card" onclick="showCategory('dsa')">
+      <h3>📘 Data Structures (DSA)</h3>
+      <p>Understand the fundamentals of efficient data handling and algorithm design.</p>
+    </div>
+    <div class="category-card" onclick="showCategory('daa')">
+      <h3>📗 Design & Analysis of Algorithms (DAA)</h3>
+      <p>Learn to analyze algorithm complexity and develop optimized solutions.</p>
+    </div>
+    <div class="category-card" onclick="showCategory('toc')">
+      <h3>📕 Theory of Computation (TOC)</h3>
+      <p>Dive into automata, languages, and computation theory foundations.</p>
+    </div>
+  </section>
+
+  <!-- DSA Videos -->
+  <section id="dsa" class="video-section">
+    <div class="video-grid">
+      <div class="video-card">
+        <iframe src="https://1drv.ms/v/c/14413db8da80ba87/IQRBNKPEvdwwQ6wCFztoPnk-AXjlGN-F1H_s2naYep5-UyE?width=1280&height=720" allowfullscreen></iframe>
+        <h4>Quick Sort Algorithm</h4>
+      </div>
+      <div class="video-card">
+        <iframe src="https://1drv.ms/v/c/14413db8da80ba87/IQRbq3ivuy6PT4vElzy4asX9AdWsu7zGjyIjJIDWvZEp1Zo?width=1280&height=720" allowfullscreen></iframe>
+        <h4>Insertion Sort Technique</h4>
+      </div>
+      <div class="video-card">
+        <iframe src="https://1drv.ms/v/c/14413db8da80ba87/IQS9ccafdNrzQbKZC8_oCwgpAaYjoLprawXVq-LzHgpMKzU?width=1280&height=720" allowfullscreen></iframe>
+        <h4>Selection Sort</h4>
+      </div>
+      <div class="video-card">
+        <iframe src="https://1drv.ms/v/c/14413db8da80ba87/IQS032GsTn9KTp8w-0bzdacUARO26oInnEiCyIPSSLpIta4?width=640&height=360" allowfullscreen></iframe>
+        <h4>Bubble Sort</h4>
+      </div>
+      <div class="video-card">
+        <iframe src="https://1drv.ms/v/c/14413db8da80ba87/IQRC3ZAsqd0xRaQbYWo6n91wAVhV4m6td46NEpxulhYKxnY?width=1280&height=720" allowfullscreen></iframe>
+        <h4>Radix Sort</h4>
+      </div>
+      <div class="video-card">
+        <iframe src="YOUR_COUNTING_SORT_IFRAME_URL_HERE" allowfullscreen></iframe>
+        <h4>Counting Sort</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- DAA Videos -->
+  <section id="daa" class="video-section">
+    <div class="video-grid">
+      <div class="video-card">
+        <iframe src="https://1drv.ms/v/c/14413db8da80ba87/IQTVFVogOYdPQYZGGq6zuChxAb1csb8FA5DBc6EtW0uCfb8?width=1280&height=720" allowfullscreen></iframe>
+        <h4>Introduction to Greedy Technique</h4>
+      </div>
+      <div class="video-card">
+        <iframe src="https://1drv.ms/v/c/14413db8da80ba87/IQSSZvB5XojkTrcSvGx-dPc9AcSnksuauuxB9otJxDYLgpA?width=1280&height=720" allowfullscreen></iframe>
+        <h4>Knapsack Problem</h4>
+      </div>
+      <div class="video-card">
+        <iframe src="https://1drv.ms/v/c/14413db8da80ba87/IQRcH-ZV6YQjSY0V0TbUQ40MAfXuzjOtUePC5rzrQTjhMPs" allowfullscreen></iframe>
+        <h4>Huffman Coding Algorithm</h4>
+      </div>
+      <div class="video-card">
+        <iframe src="https://1drv.ms/v/c/14413db8da80ba87/IQT-DZ6-b9DjRqsCPRrF-A4OAXHUmciV1UviSMY2j1x3mLA?width=1280&height=720" allowfullscreen></iframe>
+        <h4>Huffman w/ Greedy Approach</h4>
+      </div>
+      <div class="video-card">
+        <iframe src="https://1drv.ms/v/c/14413db8da80ba87/IQTJg6u-zrmuTIPkOjtB4YFLAQllBg4iIe3ydKY6yhvlFSI?width=640&height=360" allowfullscreen></iframe>
+        <h4>Job Scheduling Problem</h4>
+      </div>
+      <div class="video-card">
+        <iframe src="YOUR_BELLMAN_ALGORITHM_IFRAME_URL_HERE" allowfullscreen></iframe>
+        <h4>Bellman Algorithm</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOC Videos -->
+  <section id="toc" class="video-section">
+    <div class="video-grid">
+      <div class="video-card">
+        <iframe src="https://1drv.ms/v/c/14413db8da80ba87/EZ2NU7RmlBdNrk33dFzUEGUBtUua0aHUmuyRZ2wKuaUeSw" allowfullscreen></iframe>
+        <h4>Deterministic Finite Automata</h4>
+      </div>
+      <div class="video-card">
+        <iframe src="https://1drv.ms/v/c/14413db8da80ba87/Eb8y9YCvE29Gh0ju6QbT_g0BLcqUnQPQVfBfTxb9gGnvSA?e=PTwCud" allowfullscreen></iframe>
+        <h4>Minimization of DFA</h4>
+      </div>
+      <div class="video-card">
+        <iframe src="https://1drv.ms/v/c/14413db8da80ba87/EYY1MLUw3-VKge3_STz4VOcBNvrLGNHCZAJSjdxOKV_Mjg?e=J0Ubss" allowfullscreen></iframe>
+        <h4>Non-Deterministic Finite Automata</h4>
+      </div>
+      <div class="video-card">
+        <iframe src="https://1drv.ms/v/c/14413db8da80ba87/Eaie0yGGN0FGtxMzWCcS9RQBXE-FBbekLcyIGn87GrTBPA" allowfullscreen></iframe>
+        <h4>Conversion of NFA to DFA</h4>
+      </div>
+      <div class="video-card">
+        <iframe src="https://1drv.ms/v/c/14413db8da80ba87/ES6zltlnap1Dg9I6gDF6ICIBMZts0c_qExrheo_6M3JIiw" allowfullscreen></iframe>
+        <h4>Epsilon NFA</h4>
+      </div>
+      <div class="video-card">
+        <iframe src="https://1drv.ms/v/c/14413db8da80ba87/IQRz6NYXkn4RRZtL-S-wUMV6Af61lrB7q-GaoM7CEawCK5o?width=1280&height=720" allowfullscreen></iframe>
+        <h4>Conversion of Epsilon NFA to NFA</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- Floating Login Icon -->
+
+  <footer>
+    <p>&copy; 2025 EduStrem by Priyanshu Dangi | Learn Smarter, Not Harder</p>
+  </footer>
+
+  <script>
+    function showCategory(id) {
+      document.querySelectorAll('.video-section').forEach(s => s.style.display='none');
+      document.getElementById(id).style.display = 'block';
+      document.getElementById(id).scrollIntoView({ behavior:'smooth' });
+    }
+  </script>
+</body>
+
+</html>
